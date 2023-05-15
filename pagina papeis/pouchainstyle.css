@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     /* background: rgb(12, 12, 53); */
+    overflow: hidden;
 }
 
-.cabecario{
+.cabecario {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,11 +18,11 @@ body{
     /* border: 2px solid red; */
 }
 
-img{
+/* img {
     width: 15rem;
-}
+} */
 
-.lista{
+.lista {
     display: flex;
     gap: 3rem;
     font-weight: 600;
@@ -29,72 +30,188 @@ img{
     list-style-type: none;
 }
 
-.lista a{
+.lista a {
     text-decoration: none;
     color: black;
-}
-
-.container{
-    display: flex;
-    height:auto ;
     /* border: 2px solid red; */
-    overflow-y:hidden ;
-    margin: 5rem 2rem;
-    gap: 3rem;
 }
 
-.card{
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+    overflow-y: hidden;
+    /* gap: 1px; */
+}
+
+.card1 {
     /* border: 2px solid blue; */
-    width: 390rem;
-    height: 25rem;
+    width: 750px;
+    height: 300px;
+    margin: 10px;
+    margin-left: -10px;
     /* border-right: 3px solid rgba(0, 0, 0, 0.13); */
     display: flex;
     flex-direction: column;
-    padding: .8rem;
 }
 
-.sacola{
-    position: absolute;
-    width: 22rem;
-    left: 36rem;
-    top: 13rem;
+.card2 {
+    /* border: 2px solid blue; */
+    width: 750px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 10px;
+    /* border-right: 3px solid rgba(0, 0, 0, 0.13); */
+    display: flex;
+    flex-direction: column;
 }
 
-.sacola2{
-    position: absolute;
-    width: 17rem;
-    left: 97rem;
-    top: 19rem;
-}
-
-h3{
+.card1 h3 {
     margin-top: .5rem;
     font-size: 1.8rem;
-    /* border: 2px solid red; */
+    /* border: 2px solid red */
     padding: .8rem 5rem;
     width: 35rem;
 }
 
-p{
-    font-weight: 600;
-    /* border: 2px solid red; */
-    text-align: center;
-    width: 30rem;
-    height: 25rem;
-    overflow-y: auto;
-    padding: 2rem;
+.card2 h3 {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+    /* border: 2px solid red */
+    padding: .8rem 5rem;
+    width: 35rem;
 }
 
-::-webkit-scrollbar{
+.card1 p {
+
+    font-weight: 600;
+    /* border: 2px solid red; */
+    text-align: left;
+    width: 800px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: -200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+
+.card2 p {
+
+    font-weight: 600;
+    /* border: 2px solid red; */
+    text-align: left;
+    width: 450px;
+    height: 12rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    padding: 1em;
+}
+
+.quadro {
+    position: absolute;
+    width: 150rem;
+    height: 20em;
+    background-image: linear-gradient(to right, yellow, transparent);
+    z-index: -2;
+}
+
+
+.imagem img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 550px;
+    margin-left: 550px;
+    margin-top: -450px;
+    /* border: 2px solid red; */
+}
+
+
+/* .petala span{
+    display: block;
+    border: 2px solid red;
+    position: absolute;
+    background-color: rgb(216, 76, 100);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 270px;
+    height: 270px;
+    top: 20rem;
+    left: 50rem;
+    z-index: -1;
+} */
+
+.sacola2 {
+    position: absolute;
+    width: 14rem;
+    left: 150rem;
+    top: 21rem;
+}
+
+
+.petala2 {
+    position: absolute;
+    background-color: rgb(216, 76, 100);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: 22rem;
+    left: 70rem;
+    z-index: -1;
+}
+
+.pagina-atual{
+    /* border: 2px solid red; */
+    padding-bottom: 2px;
+    border-bottom: 4px solid magenta;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: .7em .8em;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    /* background-color: rgba(128, 128, 128, 0.342); */
+    width: 170px;
+    border: 2px solid grey;
+    margin-left: 9rem;
+    top: 33rem;
+    transition: ease-in-out .3s;
+    backdrop-filter: blur(6px);
+}
+
+.btn:hover {
+    border: 2px solid #000;
+    background-color: transparent;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+::-webkit-scrollbar {
     width: 6px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.171);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: rgb(2, 148, 206);
     border-radius: 10px;
 }
