@@ -1,3 +1,3 @@
 function saiba(){
-    alert(' Desculpe, não temos nenhuma interação no momento!');
+    alert('Desculpe, não temos nenhuma interação no momento!');
 }
